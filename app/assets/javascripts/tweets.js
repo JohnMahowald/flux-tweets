@@ -4,7 +4,8 @@ window.Tweets = {
   Views: {},
   Routers: {},
   initialize: function() {
-    alert('Hello from Backbone!');
+    router = new Tweets.Routers.AppRouter();
+    Backbone.history.start();
   }
 };
 
