@@ -4,7 +4,8 @@ window.Tweets = {
   Views: {},
   Routers: {},
   initialize: function() {
-    router = new Tweets.Routers.AppRouter();
+    this.tweets = new Tweets.Collections.Tweets([]);
+    this.router = new Tweets.Routers.AppRouter(this.tweets);
     Backbone.history.start();
   }
 };

@@ -1,2 +1,3 @@
-Tweets.Models.tweet = Backbone.Model.extend({
+Tweets.Models.Tweet = Backbone.Model.extend({
+  urlRoot: "/api/tweets/"
 })

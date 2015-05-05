@@ -1,1 +1,11 @@
-<h1>Index Template has Arrived!</h1>
+<% for (var i = 0; i < tweets.length; i++) { %>
+  <div class="tweet" data-tweet-id="<%= tweets[i].id %>">
+    <%= tweets[i].attributes.content %>
+    <div class="close">
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+<% } %>
+
+<button>New Tweet</button>
