@@ -1,0 +1,25 @@
+{
+  "name": "tweets",
+  "version": "1.0.0",
+  "description": "Tweets for rails",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jasmine",
+    "watch": "watchify -o app/assets/javascripts/react_bundle.js -v -d app/assets/javascripts/react/"
+  },
+  "keywords": [
+    "React",
+    "Flux",
+    "Rails",
+    "Routing"
+  ],
+  "author": "John Mahowald",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^0.13.2",
+    "watchify": "^3.2.1"
+  }
+}
