@@ -13,12 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.serializejson.min
-//= require underscore
-//= require backbone
-//= require tweets
-//= require_tree ../templates
-//= require_tree ./models
-//= require_tree ./collections
-//= require_tree ./views
-//= require_tree ./routers
+//= require react_bundle.js
+//= stub_path react/components
 //= require_tree .
