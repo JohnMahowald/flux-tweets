@@ -3,6 +3,8 @@ Tweets.Views.ShowTweet = Backbone.View.extend({
     this.listenTo(this.model, "sync", this.render);
   },
 
+  className: "tweet-show",
+
   events: {
     "click button": "returnToIndex"
   },
@@ -17,6 +19,6 @@ Tweets.Views.ShowTweet = Backbone.View.extend({
   },
 
   returnToIndex: function () {
-    Tweets.router.navigate("tweets", { trigger: true })
+    Tweets.router.navigate("", { trigger: true })
   }
 });

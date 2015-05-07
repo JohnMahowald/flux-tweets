@@ -4,6 +4,8 @@ Tweets.Views.NewTweet = Backbone.View.extend({
   events: {
     "click .submit": "saveTweet"
   },
+
+  className: "new-tweet",
   
   render: function () {
     this.el.innerHTML = this.template();
@@ -25,12 +27,12 @@ Tweets.Views.NewTweet = Backbone.View.extend({
   },
 
   getUserId: function () {
-    var re = /\/(\d+)\/$/;
+    var re = /\/(\d+)\/*$/;
     var data = re.exec(window.location.pathname);
     return parseInt(data[1]);
   },
 
   redirect: function () {
-    Tweets.router.navigate("tweets", { trigger: true });
+    Tweets.router.navigate("", { trigger: true });
   }
 })

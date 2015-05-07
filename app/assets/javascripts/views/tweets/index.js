@@ -2,7 +2,9 @@ Tweets.Views.TweetsIndex = Backbone.View.extend({
   initialize: function () {
     this.listenTo(this.collection, "sync add remove", this.render);
   },
-  
+
+  className: "tweets-index",
+
   events: {
     "click .tweet": "renderTweet",
     "click .close": "destroyTweet",
@@ -30,7 +32,7 @@ Tweets.Views.TweetsIndex = Backbone.View.extend({
 
   destroyTweet: function (e) {
     var id = e.target.parentElement.dataset.tweetId;
-    var model = this.collection.get(id);
+    var model = this.collection.getOrFetch(id);
     model.destroy();
   },
 

@@ -1,1 +1,23 @@
+.new-tweet {
+  h1 {
+    text-align: center;
+  }
 
+  form {
+    textarea {
+      display: block;
+      margin: 0 auto;
+      margin-top: 20px;
+      width: 200px;
+      height: 70px;
+      resize: none;
+    }
+    .submit {
+      display: block;
+      margin: 0 auto;
+      margin-top: 20px;
+      width: 200px;
+      padding: 10px;
+    }
+  }
+}

@@ -7,7 +7,7 @@ Tweets.Routers.AppRouter = Backbone.Router.extend({
   routes: {
     "tweet/:id": "showTweet",
     "tweets/new": "newTweet", 
-    "tweets": "index"
+    "": "index"
   },
   
   index: function () {
