@@ -14,5 +14,3 @@
 //= require jquery_ujs
 //= require jquery.serializejson.min
 //= require react_bundle.js
-//= stub_path react/components
-//= require_tree .
