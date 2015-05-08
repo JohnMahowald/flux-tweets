@@ -1,6 +1,5 @@
-var invariant = require("invariant");
+var invariant = require("../utils/invariant");
 var _ = require("underscore");
-var __DEV__ = "production" !== process.env.NODE_ENV;
 
 var Tweet = function (options) {
   this.permitted = ["id", "content"];
