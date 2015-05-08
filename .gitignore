@@ -18,3 +18,4 @@
 
 node_modules
 npm-debug.log
+app/assets/javascripts/react_bundle.js
