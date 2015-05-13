@@ -1,5 +1,5 @@
 jest.dontMock("../Tweet");
-jest.dontMock("invariant");
+jest.dontMock("../../utils/invariant");
 jest.dontMock("underscore");
 
 var Tweet = require("../Tweet");

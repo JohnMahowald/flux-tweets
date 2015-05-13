@@ -3,7 +3,9 @@ jest.dontMock("../TweetsStore");
 var TweetsStore = require("../TweetsStore");
 
 describe("the tweets store", function () {
-  beforeEach(function () {
+  var tweet, Tweet, tweetsStore;
+
+  beforeEach( function () {
     tweet = {
       id: jest.genMockFunction().mockReturnValueOnce(1).mockReturnValueOnce(2)
     }

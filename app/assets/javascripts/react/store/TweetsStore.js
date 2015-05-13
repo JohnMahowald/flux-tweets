@@ -1,11 +1,10 @@
-var Tweet = require("../models/Tweet");
-
-var TweetsStore = function () {
+var TweetsStore = function (tweetConstructor) {
   this.tweets = {};
+  this.tweetConstructor = tweetConstructor;
 }
 
-TweetsStore.prototype.create(options) {
-  var tweet = new Tweet(options);
+TweetsStore.prototype.create = function create(options) {
+  var tweet = this.tweetConstructor.create(options);
   this.tweets[tweet.id()] = tweet;
   return tweet;
 }
