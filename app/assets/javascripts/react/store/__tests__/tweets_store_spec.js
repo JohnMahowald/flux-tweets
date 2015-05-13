@@ -1,16 +1,39 @@
-jest.autoMockOff();
+jest.dontMock("../TweetsStore");
 
-describe("creating a new tweet", function () {
-  it("creates a new tweet, and saves it by its id", function () {
-   var TweetStore = require("../TweetStore");
+var TweetsStore = require("../TweetsStore");
 
-   var options = {
-      id: 1,
-      content: "first tweet"
+describe("the tweets store", function () {
+  beforeEach(function () {
+    tweet = {
+      id: jest.genMockFunction().mockReturnValueOnce(1).mockReturnValueOnce(2)
     }
 
-    var tweetStore = new TweetStore();
-    tweetsStore.create(options)
-    expect(tweetStore[1]).toBe("first tweet");
-  })
+    Tweet = {
+      create: jest.genMockFunction().mockReturnValue(tweet)
+    }
+
+    tweetsStore = new TweetsStore(Tweet);
+  });
+
+  describe("#create", function () {
+    it("creates a new tweet, and saves it by its id", function () {
+      var options = {
+        id: 1,
+        content: "first tweet"
+      }
+
+      tweetsStore.create(options);
+
+      expect(Tweet.create).toBeCalledWith(options);
+      expect(tweet.id).toBeCalled();
+      expect(tweetsStore.tweets[1]).toBe(tweet);
+    })
+  });
+
+  describe("#update", function () {
+    it("calls the update method for all the tweets", function () {
+      tweetsStore.create({})
+      tweetsStore.create({})
+    });
+  });
 });
