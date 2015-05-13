@@ -10,7 +10,7 @@ stores, and events.
 
 ### Master:
 Has a working instance of the project working in Backbone. Backbone files live
-in the `./app/assets/javascripts/`, and is served when visitin the /users/:id
+in the `./app/assets/javascripts/`, and is served when visitin the `/users/:id`
 route.
 
 ### Flux:
@@ -26,7 +26,6 @@ The project uses a simple Rails JSON API for interacting with the server. To get
 started with Rails, run the following: 
 
 `bundle install`
-
 `rake db:create db:migrate`
 
 ### NPM
@@ -41,4 +40,4 @@ The project uses NPM to manage client side javascript. Javscript lives in the
 navigate => localhost:3000
 
 ### Run the Tests
-`npm test'
+`npm test`
