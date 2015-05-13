@@ -26,16 +26,18 @@ The project uses a simple Rails JSON API for interacting with the server. To get
 started with Rails, run the following: 
 
 `bundle install`
+
 `rake db:create db:migrate`
 
 ### NPM
 The project uses NPM to manage client side javascript. Javscript lives in the
 `./app/assets/javascripts/` directory.
-----
+
 `npm install`
 
 ### Serve
 `rails server`
+
 navigate => localhost:3000
 
 ### Run the Tests
