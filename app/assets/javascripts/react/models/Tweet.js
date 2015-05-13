@@ -6,6 +6,10 @@ var Tweet = function (options) {
   this.data = this.validate(options);
 }
 
+Tweet.create = function (options) {
+  return new Tweet(options);
+}
+
 Tweet.prototype.id = function (id) {
   return this.data.id;
 }
@@ -23,6 +27,10 @@ Tweet.prototype.validate = function (options) {
 
   return options
 }
+
+//
+// Private
+//
 
 Tweet.prototype._validateOnlyPermittedKeys = function (keys) {
   var tweet = this;

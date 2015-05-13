@@ -17,7 +17,7 @@ describe("tweet model", function () {
     expect(tweet.content()).toBe("first tweet");
   })
 
-  describe("", function () {
+  describe("error handling", function () {
     it("raises an error when the content is not given", function () {
       var data = {
         content: "first tweet"
