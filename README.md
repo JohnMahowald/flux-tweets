@@ -1,4 +1,4 @@
-# Migration Backbone project to React
+# Migrating a Backbone Project To React
 
 The project was initially built in Backbone. The following is an exploration in
 migrating a project from Backbone to React, using Test Driven Development.
