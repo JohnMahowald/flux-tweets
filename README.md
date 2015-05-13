@@ -26,6 +26,7 @@ The project uses a simple Rails JSON API for interacting with the server. To get
 started with Rails, run the following: 
 
 `bundle install`
+
 `rake db:create db:migrate`
 
 ### NPM
