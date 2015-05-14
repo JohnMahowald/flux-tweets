@@ -32,4 +32,7 @@ describe("tweet model", function () {
       expect(function () { new Tweet(data) }).toThrow("Invariant Violation: missing key 'content'");
     });
   })
+
+  describe("id", function () {
+  });
 });

@@ -18,7 +18,11 @@ TweetsStore.prototype.updateAll = function () {
 
 TweetsStore.prototype.update = function (id) {
   this.tweets[id].update();
-  return this.tweets[id]
+  return this.tweets[id];
+}
+
+TweetsStore.prototype.get = function (id) {
+  return this.tweets[id];
 }
 
 module.exports = TweetsStore;

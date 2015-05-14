@@ -35,7 +35,7 @@ describe("the tweets store", function () {
   });
 
   describe("#update", function () {
-    beforeEach(function() {
+    beforeEach(function () {
       tweetsStore.create({})
       tweetsStore.create({})
     });
@@ -52,6 +52,16 @@ describe("the tweets store", function () {
       
       expect(tweet1.update.mock.calls.length).toBe(1);
       expect(tweet2.update.mock.calls.length).toBe(0);
+    });
+  });
+
+  describe("#get", function () {
+    it ("returns a tweet from the collection", function () {
+      tweetsStore.create({})
+
+      tweet = tweetsStore.get(1);
+
+      expect(tweet).toBe(tweet1);
     });
   });
 });
