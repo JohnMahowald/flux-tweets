@@ -9,4 +9,11 @@ TweetsStore.prototype.create = function create(options) {
   return tweet;
 }
 
+TweetsStore.prototype.updateAll = function () {
+  for (id in this.tweets) {
+    this.tweets[id].update();
+  }
+  return this.tweets;
+}
+
 module.exports = TweetsStore;

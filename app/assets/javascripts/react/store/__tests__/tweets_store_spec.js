@@ -7,7 +7,8 @@ describe("the tweets store", function () {
 
   beforeEach( function () {
     tweet = {
-      id: jest.genMockFunction().mockReturnValueOnce(1).mockReturnValueOnce(2)
+      id: jest.genMockFunction().mockReturnValueOnce(1).mockReturnValueOnce(2),
+      update: jest.genMockFunction()
     }
 
     Tweet = {
@@ -36,6 +37,10 @@ describe("the tweets store", function () {
     it("calls the update method for all the tweets", function () {
       tweetsStore.create({})
       tweetsStore.create({})
+
+      tweetsStore.updateAll();
+      
+      expect(tweet.update.mock.calls.length).toBe(2);
     });
   });
 });
