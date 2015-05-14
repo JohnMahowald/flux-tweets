@@ -1,6 +1,7 @@
 var invariant = require("../utils/invariant");
 var _ = require("underscore");
 
+
 var Tweet = function (options) {
   this.permitted = ["id", "content"];
   this.data = this.validate(options);

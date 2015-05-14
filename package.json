@@ -35,6 +35,7 @@
     "watchify": "^3.2.1"
   },
   "jest": {
-    "scriptPreprocessor": "<rootDir>/spec/helpers/preprocessor.js"
+    "scriptPreprocessor": "<rootDir>/spec/helpers/preprocessor.js",
+    "unmockedModulePathPatterns": ["<rootDir>/node_modules/react", "<rootDir>/node_modules/underscore", "<rootDir>/app/assets/javascripts/react/utils/invariant"]
   }
 }
