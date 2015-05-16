@@ -1,9 +1,8 @@
 var invariant = require("../utils/invariant");
 var _ = require("underscore");
 
-
 var Tweet = function (options) {
-  this.permitted = ["id", "content"];
+  this.permitted = ["id", "content", "urlRoot"];
   this.data = this.validate(options);
 }
 
@@ -29,9 +28,16 @@ Tweet.prototype.validate = function (options) {
   return options
 }
 
+Tweet.prototype.update = function (payload) {
+}
+
 //
 // Private
 //
+
+Tweet.prototype._url = function () {
+  return this.data.urlRoot + this.id();
+}
 
 Tweet.prototype._validateOnlyPermittedKeys = function (keys) {
   var tweet = this;
